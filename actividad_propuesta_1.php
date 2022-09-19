@@ -5,7 +5,7 @@
      
     function dimeCoche(){
 
-        $coche;
+        static $coche;
         $coche="La marca del coche es " . $coche;
 
     }
