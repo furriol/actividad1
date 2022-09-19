@@ -2,66 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link href="default.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <h1>
-          APRENDE PHP CON EJERCICIOS
-        </h1>
-        <h2>
-          SOLUCIONES A LOS EJERCICIOS
-        </h2>
-        <h2>
-          <br>4. Bucles
-        </h2>
-      </div>
-
-      <div id="content">
+    
         <?php
-          $cuentaNumeros = $_POST['cuentaNumeros'];
-          $n = $_POST['n'];
-          $positivos = $_POST['positivos'];
+          if (!isset($_POST['oportunidades'])) { //cuando no está inicializado se declaran las variables
+            $numeroIntroducido = 55555;
+            $oportunidades = 4;
+          } else {         //cuando si que está iniciado va contando las oportunidades y almacena el número introducido.
+            $oportunidades = $_POST['oportunidades'];
+            $numeroIntroducido = $_POST['numeroIntroducido'];
+          }
 
-          if (!isset($n)) {
-            $cuentaNumeros = 1;
-            $positivos = 0;
+          $numeroSecreto = 2405;
+
+          if ($numeroIntroducido == $numeroSecreto) {
+            echo "La caja fuerte se ha abierto.";
+          } else if ($oportunidades == 0) {
+            echo "Lo siento, has agotado todas tus oportunidades. La caja fuerte permanecerá cerrada.";
           } else {
-            $cuentaNumeros++;   
-          }
-          
-          if ($n > 0) {
-            $positivos++;
-          }
-
-          if ($cuentaNumeros == 1) {
-            echo "Este programa lee una lista de diez números y determina cuántos son positivos, ";
-            echo " y cuántos son negativos.<br>";
-          }
-
-          if ($cuentaNumeros < 11) {
-          ?>
-            <form action="caja_fuerte.php" method="post">
-              Número <?php echo $cuentaNumeros; ?> <input type="number" name="n" autofocus>
-              <input type="hidden" name="cuentaNumeros" value="<?php echo $cuentaNumeros; ?>">
-              <input type="hidden" name="positivos" value="<?php echo $positivos; ?>">
-              <input type="submit" value="Aceptar">
-            </form>
-          <?php
-          }
-
-          if ($cuentaNumeros == 11) {
-            echo "Se han introducido $positivos números positivos y ", (10 - $positivos), " números negativos.<br>";
+            echo "Te quedan ", $oportunidades, " oportunidades para abrir la caja fuerte.<br>";
+            $oportunidades--;
+            echo 'Introduce un número de cuatro cifras.";
+            echo '<form action="caja_fuerte.php" method="post">';
+            echo '<input type="number" min=0 max=9999 name="numeroIntroducido" autofocus>';
+            echo '<input type="hidden" name="oportunidades" value="", $oportunidades, '">';
+            echo '<input type="submit" value="Continuar">';
+            echo '</form>;
           }
         ?>
-        <br><br>
-        <a href="index.php">>> Volver</a>
-      </div>
-      
-      <div id="footer">
-        © Luis José Sánchez González
-      </div>
-    </div>
+  
   </body>
 </html>
