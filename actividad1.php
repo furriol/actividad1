@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        echo "esto es una prueba";
+        require ("actividad_propuesta_1.php");
 
     ?>
 </body>

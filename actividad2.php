@@ -1,22 +1,13 @@
 <?php
 
+echo "Bienvenido a la instalación";
 
+$a=1;
+$b=2;
 
-function contador(){
+$c=$a+$b;
 
-    static $numero=0;
+echo "El resultado es $c";
+echo "Xdebug";
 
-    $numero++;
-
-    echo $numero . "<br>";
-
-}
-
-contador();    // 1
-contador();    // 2
-contador();    // 3
-contador();    // 4
-contador();    // 5
-
-//¿Por qué no se muestran los resultados que se esperan en el comentario?
 
