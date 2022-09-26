@@ -20,10 +20,7 @@
 
       <div id="content">
         <?php
-         $a = $_POST['a'];
-            $b = $_POST['b'];
-        $c = $_POST['c'];
-        
+
           if (!isset($_POST["enviar"])){
           ?>
             Introduzca un número entero mayor que 1:
@@ -35,9 +32,17 @@
             </form>
           <?php
           } else {
-            $total=sort($_POST);
-            echo $total;
-            echo "Hola";}
+            $a = $_POST['a'];
+            $b = $_POST['b'];
+            $c = $_POST['c'];
+
+            $total=array($a,$b,$c);
+            sort($total);
+            
+            foreach($total as $clave=>$valor){
+              echo "El número " . $clave . " es: " . $valor . "<br>";
+            }
+            }
         ?>
         <br><br>
         <a href="index.php">>> Volver</a>
