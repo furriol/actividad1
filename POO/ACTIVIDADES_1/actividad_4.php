@@ -11,3 +11,5 @@ class Usuario{
     }
 
 }
+
+//se tiene que crear un método público para que se muestren

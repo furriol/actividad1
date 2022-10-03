@@ -14,3 +14,11 @@ class Bicicleta extends Vehiculo {
     return "Estoy haciendo el caballitooooooo";
   }
 }
+
+$bh=new Bicicleta(4);
+echo $bh->hazCaballito();
+echo Vehiculo::getVehiculosCreados();
+
+$bh->recorre(45);
+
+echo Vehiculo::getKmTotales();

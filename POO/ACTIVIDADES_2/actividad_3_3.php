@@ -18,8 +18,10 @@
 			 
 			 $miBici->recorre(40); //funcion publica
 			 $miCoche->recorre(200); //funcion publica
+
 			 echo $miBici->hazCaballito()."<br>"; //propia de la clase
 			 echo $miCoche->quemaRueda()."<br>"; //propia de la clase
+			 
 			 $miBici->recorre(60); //funcion publica de vehiculo que como es estática no hace falta crear un objeto de la clase vehículo
 
 			 echo "Mi bici ha recorrido ".$miBici->getKmRecorridos()." Km<br>"; //funcion publica de la clase vehiculo, que hereda la bici

@@ -1,14 +1,14 @@
 <?php
 
 class Vehiculo {
-    // Variables de clase
+    // Variables de clase, son estáticas y no necesitan instanciar ningún objeto para que funcionen
     private static $kmTotales = 0;
     private static $vehiculosCreados = 0;
     
     // Variables de instancia
     private $kmRecorridos;
     
-    // Métodos de clase
+    // Métodos de clase ESTÁTICOS
     
     public static function getVehiculosCreados() {
       return Vehiculo::$vehiculosCreados; //porque es propiedad estática
@@ -18,7 +18,8 @@ class Vehiculo {
       return Vehiculo::$kmTotales;   //porque es propiedad estática
     }
   
-    // Métodos de instancia, con cada instancia que se crea en una clase heredada
+
+    // Métodos de instancia, con cada instancia que se crea en una clase heredada.
     public function __construct() {
       Vehiculo::$vehiculosCreados++; //porque es propiedad estática
       $this->kmRecorridos = 0;
