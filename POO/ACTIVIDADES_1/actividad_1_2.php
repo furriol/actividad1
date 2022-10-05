@@ -32,3 +32,19 @@ $user1->setApellido("Furriol");
 echo $user1->id;
 
 echo "Usuario: " . $user1->getNombre() . " " . $user1->getApellido();
+
+$clase = class_exists("Usuario");
+
+
+try {
+    if($clase){
+        echo "La clase existe";
+        $prueba=new Usuario(1);
+
+    }else{
+        throw new Exception("Errores de lógica");
+    }
+    
+} catch (Exception $e) {
+    echo "Ha habido un error" . $e->getMessage();
+}
