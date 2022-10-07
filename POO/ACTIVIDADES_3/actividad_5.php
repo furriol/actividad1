@@ -53,6 +53,16 @@ echo '<br>';
 echo "La multiplicacion de $x1 y $x2 es:".Calculadora::multiplicar($x1,$x2);
 echo '<br>';
 
+
+//Vamoa a capturar errores
+//El objeto lanzado debe ser siempre una instancia de la clase Exception
+
+//Capturar el error mediante una excepcion
+//Excepcion= evento que ocurre durante la ejecución de un programa y que interrumpe el flujo normal de las sentencias
+//Diferencias: una exepcion es un evento que se espera que ocurra
+//y permite que continue el programa. Validacion incorrecta, fichero que no existe, fallo conexión BBDD
+// Error: problema que no se espera que ocurra, no se puede continuar
+//Por ejemplo error de sintaxis o falta de memoria.
 ?>
 
 </body>
