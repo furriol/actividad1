@@ -34,8 +34,8 @@ if($this_zip){
             }else{
                echo "Aquí estoy";
             }
-            closedir($folder);
-        }
+            
+        }closedir($folder);
             
 
 
