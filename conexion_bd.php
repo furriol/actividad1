@@ -43,6 +43,8 @@ while($fila2=mysqli_fetch_row($resultado2)){
 }
 mysqli_close($conexion);
 
+// SELECT * FROM PRODUCTOS WHERE NOMBREARTICULO LIKE '%CABALLERO'
+// SELECT * FROM PRODUCTOS WHERE NOMBREARTICULO LIKE 'CENI_ERO'
 
 
 
