@@ -12,6 +12,7 @@
         Nombre libro: <input type="text" name="nombre">
         Genero: <input type="text" name="genero">
         <input type="submit">
+        <input type="submit" name="again" value="Haz otra consulta">
     </form>
 </body>
 </html><?php
@@ -43,11 +44,11 @@ else{
     $nombre=$_GET['anterior'];
 }
 
-$tamano_paginas=2;
+$tamano_paginas=1;
 
 if(isset($_GET['pagina'])){
 
-if($_GET['pagina']==1){
+if(isset($_POST['again'])){
     header("Location:paginacion.php");
 }else{
     $pagina=$_GET['pagina'];
@@ -101,7 +102,7 @@ echo "<a href='paginacion.php?pagina=2&anterior=" . $nombre . "'> Hola </a>";
 
 for($i=1;$i<=$total_paginas;$i++){
 
-  echo "<a href='?pagina=" . $i . "'>" . $i . "</a> ";
+  echo "<a href='?pagina=" . $i . "&anterior=" . $nombre . "'>" . $i . "</a> ";
 
 }
 
