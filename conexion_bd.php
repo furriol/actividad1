@@ -2,6 +2,7 @@
 
 $db_host="localhost";
 $db_nombre="pruebass";
+$db_nombre="pruebass";
 $db_usuario="root";
 $db_contra="";
 
